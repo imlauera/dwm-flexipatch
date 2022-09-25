@@ -154,11 +154,11 @@ static char c000000[]                    = "#000000"; // placeholder value
 
 static char normfgcolor[]                = "#bbbbbb";
 static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#000555";
+static char normbordercolor[]            = "#222222";
 static char normfloatcolor[]             = "#db8fd9";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#000555";
+static char selbgcolor[]                 = "#222222";
 static char selbordercolor[]             = "#ff0000";
 static char selfloatcolor[]              = "#ff0000";
 
@@ -168,19 +168,19 @@ static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#000055";
+static char titleselbgcolor[]            = "#222222";
 static char titleselbordercolor[]        = "#005577";
 static char titleselfloatcolor[]         = "#005577";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#222222";
 static char tagsnormbordercolor[]        = "#444444";
-    static char tagsnormfloatcolor[]         = "#db8fd9";
+static char tagsnormfloatcolor[]         = "#db8fd9";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#000055";
+static char tagsselbgcolor[]             = "#ff0000";
 static char tagsselbordercolor[]         = "#000000";
-static char tagsselfloatcolor[]          = "#005577";
+static char tagsselfloatcolor[]          = "#ff0000";
 
 static char hidnormfgcolor[]             = "#005577";
 static char hidselfgcolor[]              = "#227799";
@@ -482,7 +482,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
-	RULE(.class = "Brave-browser", .tags = 1 << 3)
+	RULE(.class = "Brave-browser", .tags = 1 << 2)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH

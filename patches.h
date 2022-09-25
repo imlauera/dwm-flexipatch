@@ -802,7 +802,7 @@
  *
  * https://dwm.suckless.org/patches/nametag/
  */
-#define NAMETAG_PATCH 0
+#define NAMETAG_PATCH 1
 
 /* Variant of the above which prepends the tag number to the given string.
  * The toggle does nothing on its own and need to be enabled in combination with the above. */
@@ -863,7 +863,7 @@
  * monitor (default).
  * https://dwm.suckless.org/patches/pertag/
  */
-#define PERTAG_PATCH 0
+#define PERTAG_PATCH 1
 
 /* Option to store gaps on a per tag basis rather than on a per monitor basis.
  * Depends on both pertag and vanitygaps patches being enabled.
