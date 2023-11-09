@@ -1,1 +1,2 @@
-service lightdm disable
+
+sudo systemctl enable lightdm
