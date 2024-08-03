@@ -482,7 +482,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
-	RULE(.class = "Brave-browser", .tags = 1 << 2)
+	RULE(.class = "Chromium", .tags = 1 << 2)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
@@ -856,8 +856,8 @@ static const char *dmenucmd[] = {
 static const char *es_keyboard[] = { "setxkbmap", "es", NULL };
 static const char *us_keyboard[] = { "setxkbmap", "us", NULL };
 static const char *ru_keyboard[] = { "setxkbmap", "ru", NULL };
-static const char *termcmd[]  = { "st","-e","tmux", NULL };
-static const char *screenshot[]  = { "mxfb-quickshot",NULL };
+static const char *termcmd[]  = { "st","-e","dvtm", NULL };
+static const char *screenshot[]  = { "scrot","-s",NULL };
 static const char *screenshot2[]  = { "scrot",NULL };
 
 static const char *upvol[] = { "amixer", "-q", "set", "Master", "5%+", NULL };
@@ -901,7 +901,8 @@ static const Key keys[] = {
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
-	{ MODKEY|ShiftMask,                       XK_p,          spawn,                  {.v = dmenucmd } },
+	//{ MODKEY|ShiftMask,                       XK_p,          spawn,                  {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,           XK_f,      spawn,                    {.v = screenshot } },
 	{ MODKEY|ShiftMask,           XK_s,      spawn,                    {.v = screenshot2 } },
