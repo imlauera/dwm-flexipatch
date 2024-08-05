@@ -481,7 +481,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-	RULE(.class = "Gimp", .tags = 1 << 4)
+	RULE(.class = "Gimp", .tags = 1 << 4, .isfloating = 1)
 	RULE(.class = "Chromium", .tags = 1 << 2)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
@@ -853,6 +853,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
+static const char *lock[] = { "dm-tool", "lock", NULL };
 static const char *es_keyboard[] = { "setxkbmap", "es", NULL };
 static const char *us_keyboard[] = { "setxkbmap", "us", NULL };
 static const char *ru_keyboard[] = { "setxkbmap", "ru", NULL };
@@ -1289,7 +1290,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          {.v = upvol } },
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          {.v = downvol } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mute } },
-	{ MODKEY|ShiftMask,             XK_l,   spawn, {.v = screensaver } },
+	{ MODKEY|ShiftMask,             XK_l,   spawn, {.v = lock } },
 	{ MODKEY|ShiftMask,             XK_b,   spawn, {.v = brightness_up } },
 	{ MODKEY|ShiftMask,             XK_v, spawn, {.v = brightness_down } },
 
