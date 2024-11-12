@@ -483,6 +483,9 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4, .isfloating = 1)
 	RULE(.class = "Chromium", .tags = 1 << 2)
+	RULE(.class = "perplexity ai", .tags = 1 << 8)
+	RULE(.class = "Perplexity AI", .tags = 1 << 8)
+	RULE(.class = "AI Gate", .tags = 1 << 8)
 	RULE(.class = "floorp", .tags = 1 << 2)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
@@ -858,7 +861,10 @@ static const char *lock[] = { "dm-tool", "lock", NULL };
 static const char *es_keyboard[] = { "setxkbmap", "es", NULL };
 static const char *us_keyboard[] = { "setxkbmap", "us", NULL };
 static const char *ru_keyboard[] = { "setxkbmap", "ru", NULL };
-static const char *termcmd[]  = { "xterm","-e","xterm", NULL };
+//static const char *termcmd[]  = { "xterm","-e","tmux", NULL };
+//static const char *termcmd[]  = { "xterm","-e","tmux", NULL };
+//static const char *termcmd[]  = { "st","-e","dvtm", NULL };
+static const char *termcmd[]  = { "xterm", NULL };
 static const char *screenshot[]  = { "scrot","-s",NULL };
 static const char *screenshot2[]  = { "scrot",NULL };
 
